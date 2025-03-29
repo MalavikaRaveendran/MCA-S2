@@ -1,43 +1,24 @@
 import java.util.Scanner;
 
-class num1 {
-    int nu1, nu2;
-
-    public num1() {
-        Scanner a = new Scanner(System.in);
-        System.out.print("Enter real part of complex number: ");
-        this.nu1 = a.nextInt();
-        System.out.print("Enter imaginary part of complex number: ");
-        this.nu2 = a.nextInt();
-    }
-
-    public void display() {
-        System.out.println(nu1 + " + " + nu2 + "i");
-    }
-
-    public int getRealPart() {
-        return nu1;
-    }
-
-    public int getImaginaryPart() {
-        return nu2;
-    }
-}
-
-public class ComplexNumber {
+public class ComplexNumberAddition {
     public static void main(String[] args) {
-        num1 number1 = new num1();
-        num1 number2 = new num1();
+        Scanner sc = new Scanner(System.in);
 
-        int realSum = number1.getRealPart() + number2.getRealPart();
-        int imaginarySum = number1.getImaginaryPart() + number2.getImaginaryPart();
+        System.out.print("Enter the real part of first complex number: ");
+        double real1 = sc.nextDouble();
+        System.out.print("Enter the imaginary part of first complex number: ");
+        double imag1 = sc.nextDouble();
 
-        System.out.print("First complex number: ");
-        number1.display();
+        System.out.print("Enter the real part of second complex number: ");
+        double real2 = sc.nextDouble();
+        System.out.print("Enter the imaginary part of second complex number: ");
+        double imag2 = sc.nextDouble();
 
-        System.out.print("Second complex number: ");
-        number2.display();
+        double realSum = real1 + real2;
+        double imagSum = imag1 + imag2;
 
-        System.out.println("Sum of the two complex numbers: " + realSum + " + " + imaginarySum + "i");
+        System.out.println("Sum of the complex numbers: " + realSum + " + " + imagSum + "i");
+
+        sc.close();
     }
 }
